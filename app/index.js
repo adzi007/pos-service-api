@@ -18,7 +18,7 @@ import path from "path";
 dotenv.config();
 const app = express();
 
-console.log("connnnnnnntooooolllllll");
+
 try {
     await db.authenticate();
     console.log("database conected...!");
@@ -29,7 +29,7 @@ try {
     // await PosOrder.sync();
     // await PosOrderList.sync();
 } catch (error) {
-    console.log("error databasezzzz",error);
+    console.log("error",error);
 }
 
 app.use(cors({ origin: true, credentials:true, origin:'http://localhost:3005' }));
